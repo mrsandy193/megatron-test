@@ -18,7 +18,7 @@ public class DataHandlers {
 	{
 		String data = null;
 		try {
-			File f = new File("./test-data/"+fileName+".properties");
+			File f = new File("./test-data/"+fileName+".xlsx");
 			FileInputStream fis = new FileInputStream(f);
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet st = wb.getSheet(sheetName);
@@ -34,7 +34,7 @@ public class DataHandlers {
 	public static void setDataToExcel(String fileName,String sheetName,int RowIndex, int cellIndex,String data)
 	{
 		try {
-			File f = new File("./test-data/"+fileName+".properties");
+			File f = new File("./test-data/"+fileName+".xlsx");
 			FileInputStream fis = new FileInputStream(f);
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet st = wb.getSheet(sheetName);
